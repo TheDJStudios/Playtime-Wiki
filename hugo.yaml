@@ -1,0 +1,40 @@
+title: Playtime Wiki
+baseURL: https://TARDIS-Universe.github.io/Playtime-Wiki/
+enableRobotsTXT: true
+enableGitInfo: true
+defaultContentLanguage: en
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+  mounts:
+    - source: content
+      target: content
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+params:
+  author:
+    name: TAMA Studios
+    email: null@tamastudios.us
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+  editURL:
+    base: "https://github.com/TARDIS-universe/Playtime-Wiki/edit/main/content/"
+
+menu:
+  main:
+    - name: Search
+      weight: 1
+      params:
+        type: search
+    - name: GitHub
+      url: "https://github.com/TARDIS-Universe/Playtime"
+      weight: 2
+      params:
+        icon: github
